@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biel Empresa Gamer - Ultra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #0ff;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #111;
+      text-align: center;
+      padding: 15px;
+    }
+    nav {
+      background: #111;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #0ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #0ff;
+      text-align: center;
+    }
+    .card {
+      background: #111;
+      border: 1px solid #0ff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #0ff;
+      background: #000;
+      color: #0ff;
+    }
+    button {
+      background: #0ff;
+      color: #000;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .pix-box {
+      background: #111;
+      border: 1px dashed #0ff;
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .pix-key {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .qr {
+      text-align: center;
+    }
+    .qr img {
+      width: 150px;
+      margin-top: 10px;
+    }
+    a:hover, button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Biel Empresa Gamer</h1>
+  <p>Empresa Gamer de verdade com produtos Premium e suporte total</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#fundador">Fundador</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#pedido">Pedido</a>
+  <a href="#contato">Contato</a>
+  <a href="#privacidade">Privacidade</a>
+</nav>
+
+<section id="sobre">
+  <h2>Sobre a Empresa</h2>
+  <div class="card">
+    Empresa voltada para o público gamer, com foco em contas de jogos, HUDs e sensibilidades otimizadas para Free Fire, Blox Fruits e outros games. 
+    A Biel Empresa Gamer trabalha com qualidade, confiança e entrega imediata.
+  </div>
+</section>
+
+<section id="fundador">
+  <h2>Sobre o Fundador</h2>
+  <div class="card">
+    Gabriel Lucas, fundador da Biel Empresa Gamer, iniciou esse projeto com a missão de transformar o desempenho de jogadores brasileiros com estilo e performance.
+  </div>
+</section>
+
+<section id="produtos">
+  <h2>Produtos em Destaque</h2>
+  <div class="card"><strong>🔥 Conta FF Full Angelical + 12K Diamantes</strong><br>R$ 149,90</div>
+  <div class="card"><strong>🎮 HUD + Sensibilidade Ultra FF</strong><br>R$ 49,90</div>
+  <div class="card"><strong>💼 Pack com 3 Contas FF Variadas</strong><br>R$ 199,90</div>
+  <div class="card"><strong>🐉 Conta Blox Fruits Nível 2450 + Frutas Lendárias</strong><br>R$ 179,90</div>
+</section>
+
+<section id="pedido">
+  <h2>Fazer um Pedido</h2>
+  <div class="pix-box">
+    <p>Antes de enviar o pedido, realize o pagamento via Pix:</p>
+    <div class="pix-key"><strong>Chave Pix:</strong><br>31983070915</div>
+    <button onclick="copiarPix()">Copiar Pix</button>
+  </div>
+  <form id="formPedido">
+    <input type="text" name="nome" placeholder="Seu nome" required />
+    <input type="text" name="produto" placeholder="Ex: Conta Mestre FF" required />
+    <input type="text" name="whatsapp" placeholder="(31) 00000-0000" required />
+    <textarea name="mensagem" placeholder="Deixe sua dúvida ou pedido..." rows="4"></textarea>
+    <button type="submit">Enviar Pedido via WhatsApp</button>
+  </form>
+</section>
+
+<section id="contato">
+  <h2>Contato Rápido</h2>
+  <div class="card qr">
+    <p>WhatsApp direto: <strong>31983070915</strong></p>
+    <p>Instagram: <a href="https://instagram.com/branquin_xj" target="_blank">@branquin_xj</a></p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/5531983070915" alt="QR WhatsApp" />
+  </div>
+</section>
+
+<section id="privacidade">
+  <h2>Política de Privacidade</h2>
+  <div class="card">
+    Coletamos apenas dados necessários para atendimento ao cliente (nome, WhatsApp, produto e mensagem). Nenhum dado é compartilhado com terceiros.
+    Todas as conversas e pedidos são realizados via WhatsApp com consentimento do usuário. A segurança e privacidade dos dados é uma prioridade.
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Biel Empresa Gamer - Todos os direitos reservados</p>
+</footer>
+
+<script>
+  function copiarPix() {
+    navigator.clipboard.writeText("31983070915");
+    alert("Chave Pix copiada com sucesso!");
+  }
+
+  document.getElementById("formPedido").addEventListener("submit", function(e) {
+    e.preventDefault();
+    var nome = document.querySelector('input[name="nome"]').value;
+    var produto = document.querySelector('input[name="produto"]').value;
+    var whatsapp = document.querySelector('input[name="whatsapp"]').value;
+    var mensagem = document.querySelector('textarea[name="mensagem"]').value;
+    var texto = `Nome: ${nome}%0AProduto: ${produto}%0AWhatsApp: ${whatsapp}%0AMensagem: ${mensagem}`;
+    window.open(`https://wa.me/5531983070915?text=${texto}`, "_blank");
+  });
+</script>
+
+</body>
+</html>
